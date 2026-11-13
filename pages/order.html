@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Order at your table | P Cube Charcoal Food Den</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="/css/order.css">
+</head>
+<body class="order-page">
+  <header class="order-top">
+    <div class="order-wrap order-top-inner">
+      <span class="order-brand" id="brand">P Cube Charcoal Food Den</span>
+      <span class="table-badge" id="table-badge" aria-live="polite">Table &hellip;</span>
+    </div>
+    <nav class="order-wrap order-tabs" role="tablist" aria-label="Sections">
+      <button class="order-tab" role="tab" id="tab-menu" aria-selected="true" type="button">Menu</button>
+      <button class="order-tab" role="tab" id="tab-orders" aria-selected="false" type="button">My orders <span id="orders-count"></span></button>
+    </nav>
+  </header>
+
+  <main class="order-wrap">
+    <p class="notice notice-error" id="fatal" role="alert" hidden></p>
+    <section id="view-menu"><div id="menu-root"><p class="muted">Loading menu&hellip;</p></div></section>
+    <section id="view-orders" hidden></section>
+  </main>
+
+  <div class="cart-bar" id="cart-bar" hidden>
+    <button class="btn" id="open-cart" type="button"><span id="cart-bar-left">View cart</span><span id="cart-bar-right"></span></button>
+  </div>
+
+  <button class="waiter-fab" id="waiter-fab" type="button" hidden>Call Waiter</button>
+
+  <noscript><p class="notice notice-warning">Please turn on JavaScript to order.</p></noscript>
+  <script src="/js/common.js"></script>
+  <script src="/js/menu-ui.js"></script>
+  <script src="/js/order.js"></script>
+</body>
+</html>

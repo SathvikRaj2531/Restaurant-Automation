@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Waiter | P Cube Charcoal Food Den</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" href="/css/staff.css">
+</head>
+<body>
+  <header class="s-top">
+    <div class="s-wrap s-top-inner">
+      <span class="s-title">Waiter <span class="s-who" id="who">&nbsp;</span></span>
+      <div class="s-actions">
+        <button class="btn btn-sm btn-sound-off" id="sound" type="button">Enable sound</button>
+        <a class="btn btn-sm btn-on-dark" href="/staff/change-password">Password</a>
+        <button class="btn btn-sm btn-on-dark" id="logout" type="button">Sign out</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="s-wrap s-main">
+    <p class="notice notice-error" id="err" role="alert" hidden></p>
+    <section id="board" aria-live="polite"><p class="muted">Loading&hellip;</p></section>
+  </main>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/waiter.js"></script>
+</body>
+</html>

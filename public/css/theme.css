@@ -1,0 +1,81 @@
+/* ==========================================================================
+   THEME FILE - every colour, font, radius and shadow lives here.
+   To rebrand, edit only the values below. No other file hard-codes a colour.
+   ========================================================================== */
+:root {
+  /* Brand */
+  --color-brand: #b83a0a;
+  --color-brand-dark: #8f2d08;
+  --color-brand-contrast: #ffffff;
+
+  /* Surfaces and text */
+  --color-bg: #fbf6ee;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f3eadc;
+  --color-text: #1c1613;
+  --color-text-muted: #6a5d52;
+  --color-border: #e8dcc9;
+  --color-dark: #15100d;
+  --color-dark-contrast: #f8efe2;
+  --color-placeholder: #e4d9c7;
+  --color-overlay: rgba(20, 16, 12, 0.55);
+
+  /* Public website accents */
+  --color-accent: #f2a516;            /* saffron: highlights on dark backgrounds */
+  --color-accent-contrast: #1c1613;
+  --color-hero-fade: rgba(15, 10, 8, 0.82);
+  --color-hero-fade-soft: rgba(15, 10, 8, 0.28);
+  --color-glass: rgba(21, 16, 13, 0.97);
+  --color-on-dark-muted: rgba(248, 239, 226, 0.72);
+  --color-on-dark-line: rgba(248, 239, 226, 0.16);
+  --shadow-card: 0 10px 30px rgba(40, 24, 12, 0.14);
+
+  /* Veg / non-veg indicators */
+  --color-veg: #1b8a3a;
+  --color-nonveg: #c62828;
+
+  /* Feedback */
+  --color-danger: #c62828;
+  --color-danger-bg: #fdecec;
+  --color-success: #1b8a3a;
+  --color-success-bg: #e6f5ea;
+  --color-warning: #b45309;
+  --color-warning-bg: #fff4d6;
+  --color-whatsapp: #1e9e52;
+
+  /* Order status colours */
+  --status-new: #d97706;
+  --status-new-bg: #fff1cf;
+  --status-accepted: #2563eb;
+  --status-accepted-bg: #e4edff;
+  --status-preparing: #c2410c;
+  --status-preparing-bg: #ffe6d8;
+  --status-ready: #15803d;
+  --status-ready-bg: #dcf5e4;
+  --status-served: #57534e;
+  --status-served-bg: #ece8e2;
+  --status-completed: #57534e;
+  --status-completed-bg: #ece8e2;
+  --status-cancelled: #b91c1c;
+  --status-cancelled-bg: #fde4e4;
+
+  /* Table states (staff Tables tab) */
+  --table-free: #e6f5ea;
+  --table-new: #fff1cf;
+  --table-progress: #e4edff;
+
+  /* Printed receipt (thermal paper: ink on paper) */
+  --receipt-ink: #000000;
+  --receipt-paper: #ffffff;
+
+  /* Typography */
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
+  --font-heading: "Playfair Display", Georgia, "Times New Roman", serif;
+
+  /* Shape */
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 1px 3px rgba(40, 30, 20, 0.12);
+  --shadow-lg: 0 8px 28px rgba(40, 30, 20, 0.25);
+  --content-width: 1080px;
+}

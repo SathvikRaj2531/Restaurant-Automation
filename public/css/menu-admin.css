@@ -1,0 +1,25 @@
+/* Menu management. Colours come from theme.css only. */
+.ma-bar { display: grid; gap: .5rem; grid-template-columns: 1fr 1fr; margin: .6rem 0; }
+.ma-bar .input { grid-column: 1 / -1; }
+.ma-cat { margin-top: 1.2rem; }
+.ma-cat-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .4rem; padding: .5rem 0; border-bottom: 2px solid var(--color-border); }
+.ma-cat-head h2 { margin: 0; font-size: 1.15rem; }
+.ma-cat-tools { display: flex; gap: .3rem; }
+.ma-row { display: grid; gap: .5rem; padding: .7rem 0; border-bottom: 1px solid var(--color-border); }
+.ma-row.is-off .ma-name { opacity: .55; }
+.ma-name { display: flex; gap: .5rem; align-items: center; font-weight: 700; flex-wrap: wrap; }
+.ma-sub { font-weight: 400; color: var(--color-text-muted); font-size: .85rem; }
+.ma-price { color: var(--color-text-muted); font-size: .92rem; }
+.ma-controls { display: flex; flex-wrap: wrap; gap: .6rem 1rem; align-items: center; }
+.ma-toggle { display: inline-flex; align-items: center; gap: .45rem; min-height: 44px; font-weight: 600; cursor: pointer; }
+.ma-toggle input { width: 22px; height: 22px; accent-color: var(--color-brand); }
+.ma-controls .btn { margin-left: auto; }
+
+.ma-form { display: grid; gap: .2rem; }
+.ma-form .field { margin-bottom: .7rem; }
+.ma-radios { display: flex; gap: 1.2rem; }
+.ma-radios label { display: inline-flex; gap: .4rem; align-items: center; min-height: 44px; cursor: pointer; }
+.ma-portion { display: grid; grid-template-columns: 1fr 7rem auto; gap: .4rem; margin-bottom: .4rem; align-items: center; }
+.ma-checks { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+.ma-form-foot { display: flex; flex-wrap: wrap; gap: .5rem; }
+.ma-form-foot .grow { flex: 1; }

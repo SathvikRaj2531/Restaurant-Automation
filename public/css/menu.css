@@ -1,0 +1,28 @@
+/* Menu list styles (public menu page and QR ordering). Colours come from theme.css. */
+.menu-controls { position: sticky; top: 0; z-index: 20; background: var(--color-bg); padding: .6rem 0; display: grid; gap: .5rem; border-bottom: 1px solid var(--color-border); }
+.chips, .tabs { display: flex; gap: .4rem; overflow-x: auto; padding-bottom: 2px; scrollbar-width: thin; }
+.chip { flex: none; display: inline-flex; align-items: center; gap: .4em; min-height: 38px; padding: 0 .9em; border: 1px solid var(--color-border); border-radius: 999px; background: var(--color-surface); cursor: pointer; white-space: nowrap; }
+.chip[aria-pressed="true"] { background: var(--color-dark); color: var(--color-dark-contrast); border-color: var(--color-dark); }
+.chip:focus-visible { outline: 3px solid var(--color-brand); outline-offset: 1px; }
+
+.menu-cat { margin-top: 1.4rem; }
+.menu-cat h2 { margin-bottom: .3rem; padding-bottom: .3rem; border-bottom: 2px solid var(--color-accent); display: inline-block; }
+.menu-sub { font-family: var(--font-body); font-size: .95rem; letter-spacing: .04em; text-transform: uppercase; color: var(--color-text-muted); margin: .9rem 0 .2rem; }
+.menu-items { display: grid; gap: 0; }
+.menu-item { display: flex; gap: .8rem; align-items: center; padding: .8rem 0; border-bottom: 1px solid var(--color-border); }
+.menu-item-main { flex: 1; min-width: 0; }
+.menu-thumb { flex: none; width: 84px; height: 84px; object-fit: cover; border-radius: var(--radius); background: var(--color-dark); box-shadow: var(--shadow); }
+.menu-item-name { display: flex; gap: .5rem; align-items: center; font-weight: 600; }
+.menu-item-desc { margin: .15rem 0 0; font-size: .92rem; }
+.portions { display: flex; flex-wrap: wrap; gap: .25rem 1rem; margin-top: .3rem; }
+.portion-label { color: var(--color-text-muted); }
+.portion-price { font-weight: 600; }
+.portion.tbc .portion-price { font-weight: 400; font-style: italic; color: var(--color-text-muted); }
+.add-btn { flex: none; min-width: 72px; }
+.menu-item.is-unavailable { opacity: .55; filter: grayscale(1); }
+.badge-unavailable { display: inline-block; margin-top: .3rem; padding: .1rem .6rem; border-radius: 999px; background: var(--color-surface-alt); color: var(--color-text-muted); font-size: .85rem; font-weight: 600; }
+
+@media (min-width: 760px) {
+  .menu-thumb { width: 96px; height: 96px; }
+  .menu-items { grid-template-columns: 1fr 1fr; column-gap: 2rem; }
+}

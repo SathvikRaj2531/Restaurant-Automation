@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Analytics | P Cube Charcoal Food Den</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" href="/css/staff.css">
+  <link rel="stylesheet" href="/css/analytics.css">
+</head>
+<body>
+  <header class="s-top">
+    <div class="s-wrap s-top-inner">
+      <span class="s-title">Analytics <span class="s-who" id="who">&nbsp;</span></span>
+      <div class="s-actions">
+        <a class="btn btn-sm btn-on-dark" href="/staff">Orders</a>
+        <a class="btn btn-sm btn-on-dark" href="/staff/bills">Bills</a>
+        <button class="btn btn-sm btn-on-dark" id="logout" type="button">Sign out</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="s-wrap s-main">
+    <div class="an-filters" id="filters" role="group" aria-label="Date range"></div>
+    <p class="notice notice-error" id="err" role="alert" hidden></p>
+    <section id="root"><p class="muted">Loading&hellip;</p></section>
+  </main>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/analytics.js"></script>
+</body>
+</html>

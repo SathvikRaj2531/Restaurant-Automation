@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Orders | P Cube Charcoal Food Den</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" href="/css/staff.css">
+</head>
+<body>
+  <header class="s-top">
+    <div class="s-wrap s-top-inner">
+      <span class="s-title">P Cube Charcoal Food Den <span class="s-who" id="who">&nbsp;</span></span>
+      <div class="s-actions">
+        <button class="btn btn-sm btn-sound-off" id="sound" type="button">Enable sound</button>
+        <a class="btn btn-sm btn-on-dark" href="/staff/bills">Bills</a>
+        <a class="btn btn-sm btn-on-dark" href="/staff/analytics">Analytics</a>
+        <a class="btn btn-sm btn-on-dark" href="/staff/menu">Menu</a>
+        <a class="btn btn-sm btn-on-dark" id="settings-link" href="/staff/settings" hidden>Settings</a>
+        <a class="btn btn-sm btn-on-dark" href="/staff/qr">QR codes</a>
+        <a class="btn btn-sm btn-on-dark" href="/staff/change-password">Password</a>
+        <button class="btn btn-sm btn-on-dark" id="logout" type="button">Sign out</button>
+      </div>
+    </div>
+    <nav class="s-wrap s-tabs" role="tablist" aria-label="Sections">
+      <button class="s-tab" role="tab" id="t-live" aria-selected="true" type="button">Live <span class="tab-count" id="live-count" hidden>0</span></button>
+      <button class="s-tab" role="tab" id="t-tables" aria-selected="false" type="button">Tables <span class="tab-count" id="req-count" hidden>0</span></button>
+      <button class="s-tab" role="tab" id="t-history" aria-selected="false" type="button">History</button>
+    </nav>
+  </header>
+
+  <main class="s-wrap s-main">
+    <section id="live" aria-live="polite"><p class="muted">Loading&hellip;</p></section>
+    <section id="tables" hidden></section>
+    <section id="history" hidden></section>
+  </main>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/staff.js"></script>
+</body>
+</html>

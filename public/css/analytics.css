@@ -1,0 +1,31 @@
+/* Analytics. Colours come from theme.css only. Single-series charts use the brand colour. */
+.an-filters { display: flex; flex-wrap: wrap; gap: .5rem; align-items: end; margin: .8rem 0; }
+.an-chip { min-height: 44px; padding: 0 1rem; border: 1px solid var(--color-border); border-radius: 999px; background: var(--color-surface); font-weight: 600; cursor: pointer; }
+.an-chip[aria-pressed="true"] { background: var(--color-brand); border-color: var(--color-brand); color: var(--color-brand-contrast); }
+.an-chip:focus-visible { outline: 3px solid var(--color-brand); outline-offset: 2px; }
+.an-custom { display: flex; flex-wrap: wrap; gap: .5rem; align-items: end; width: 100%; }
+.an-custom .field { margin: 0; flex: 1 1 140px; }
+.an-kpis { display: grid; grid-template-columns: repeat(2, 1fr); gap: .7rem; margin-top: .6rem; }
+.an-kpi { padding: .8rem; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); }
+.an-kpi .v { font-size: 1.5rem; font-weight: 800; line-height: 1.2; }
+.an-kpi .l { color: var(--color-text-muted); font-size: .85rem; }
+.an-grid { display: grid; gap: .9rem; margin-top: .9rem; }
+.an-card { padding: .9rem; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); box-shadow: var(--shadow); }
+.an-card h2 { font-size: 1.05rem; margin-bottom: .1rem; }
+.an-card .sub { margin: 0 0 .6rem; color: var(--color-text-muted); font-size: .85rem; }
+.an-chart { width: 100%; height: auto; display: block; }
+.an-chart .grid { stroke: var(--color-border); stroke-width: 1; }
+.an-chart .tick { fill: var(--color-text-muted); font-size: 15px; font-family: var(--font-body); }
+.an-chart .bar { fill: var(--color-brand); }
+.an-chart .hit { fill: transparent; }
+.an-chart .hit:hover + .bar, .an-chart .hit:focus + .bar { fill: var(--color-brand-dark); }
+.an-rank { list-style: none; margin: 0; padding: 0; display: grid; gap: .45rem; }
+.an-rank li { display: grid; grid-template-columns: 1fr auto; gap: .1rem .6rem; font-size: .95rem; }
+.an-rank .track { grid-column: 1 / -1; height: 6px; border-radius: 3px; background: var(--color-surface-alt); overflow: hidden; }
+.an-rank .fill { display: block; height: 100%; background: var(--color-brand); border-radius: 3px; }
+.an-rank .val { font-weight: 700; white-space: nowrap; }
+.an-table { width: 100%; border-collapse: collapse; font-size: .9rem; margin-top: .5rem; }
+.an-table th, .an-table td { text-align: left; padding: .3rem .2rem; border-bottom: 1px dashed var(--color-border); }
+.an-table .num { text-align: right; }
+details.an-data summary { cursor: pointer; color: var(--color-text-muted); font-size: .85rem; min-height: 32px; }
+@media (min-width: 700px) { .an-kpis { grid-template-columns: repeat(4, 1fr); } .an-grid { grid-template-columns: repeat(2, 1fr); } .an-wide { grid-column: 1 / -1; } }

@@ -1,0 +1,65 @@
+/* Customer QR ordering screen. Mobile-first. Colours come from theme.css only. */
+body.order-page { padding-bottom: 5.5rem; }
+.order-wrap { width: 100%; max-width: 760px; margin: 0 auto; padding: 0 16px; }
+
+.order-top { position: sticky; top: 0; z-index: 40; background: var(--color-dark); color: var(--color-dark-contrast); }
+.order-top-inner { display: flex; align-items: center; justify-content: space-between; gap: .6rem; padding-top: .6rem; padding-bottom: .6rem; }
+.order-brand { font-family: var(--font-heading); font-weight: 700; font-size: 1rem; }
+.table-badge { background: var(--color-brand); color: var(--color-brand-contrast); padding: .25rem .8rem; border-radius: 999px; font-weight: 800; white-space: nowrap; }
+.order-tabs { display: flex; }
+.order-tab { flex: 1; min-height: 46px; border: 0; background: transparent; color: var(--color-dark-contrast); opacity: .7; font-weight: 700; cursor: pointer; border-bottom: 3px solid transparent; }
+.order-tab[aria-selected="true"] { opacity: 1; border-bottom-color: var(--color-brand); }
+.order-tab:focus-visible { outline: 3px solid var(--color-brand); outline-offset: -3px; }
+
+.order-top + main .menu-controls { top: var(--order-top-h, 96px); }
+
+.cart-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 45; padding: .7rem 16px calc(.7rem + env(safe-area-inset-bottom)); background: var(--color-bg); border-top: 1px solid var(--color-border); box-shadow: var(--shadow-lg); }
+.cart-bar .btn { width: 100%; max-width: 728px; margin: 0 auto; display: flex; justify-content: space-between; min-height: 50px; }
+
+/* Bottom-sheet dialogs */
+dialog.sheet { margin: auto auto 0; width: 100%; max-width: 560px; max-height: 92vh; border-radius: 16px 16px 0 0; padding: 0; overflow: hidden; }
+dialog.sheet[open] { display: flex; flex-direction: column; }
+.sheet-head { display: flex; align-items: center; justify-content: space-between; gap: .6rem; padding: .9rem 1rem; border-bottom: 1px solid var(--color-border); }
+.sheet-head h2 { margin: 0; font-size: 1.15rem; }
+.sheet-body { padding: 1rem; overflow-y: auto; }
+.sheet-foot { padding: .8rem 1rem calc(.8rem + env(safe-area-inset-bottom)); border-top: 1px solid var(--color-border); background: var(--color-surface); }
+.close-x { min-width: 44px; min-height: 44px; border: 0; background: transparent; font-size: 1.6rem; line-height: 1; cursor: pointer; }
+@media (min-width: 640px) { dialog.sheet { margin: auto; border-radius: var(--radius); } }
+
+.portion-picker { display: grid; gap: .5rem; margin: .8rem 0; }
+.portion-option { display: flex; align-items: center; gap: .7rem; padding: .7rem .9rem; border: 1px solid var(--color-border); border-radius: var(--radius-sm); cursor: pointer; }
+.portion-option:has(input:checked) { border-color: var(--color-brand); background: var(--color-surface-alt); }
+.portion-option.is-disabled { opacity: .5; cursor: not-allowed; }
+.portion-option .price { margin-left: auto; font-weight: 700; }
+.portion-option input { width: 20px; height: 20px; accent-color: var(--color-brand); }
+
+.stepper { display: inline-flex; align-items: center; border: 1px solid var(--color-border); border-radius: var(--radius-sm); overflow: hidden; background: var(--color-surface); }
+.stepper button { width: 44px; height: 44px; border: 0; background: var(--color-surface-alt); font-size: 1.4rem; cursor: pointer; }
+.stepper button:disabled { opacity: .4; cursor: not-allowed; }
+.stepper .qty-value { min-width: 44px; text-align: center; font-weight: 700; }
+.row-between { display: flex; align-items: center; justify-content: space-between; gap: .8rem; }
+
+.cart-line { padding: .8rem 0; border-bottom: 1px solid var(--color-border); display: grid; gap: .5rem; }
+.cart-line-name { display: flex; gap: .5rem; align-items: center; font-weight: 600; }
+.cart-line .line-note { min-height: 40px; font-size: .92rem; }
+.cart-total { display: flex; justify-content: space-between; font-size: 1.2rem; font-weight: 800; margin: 1rem 0 .4rem; }
+
+/* My orders */
+.orders-list { display: grid; gap: .9rem; margin-top: 1rem; }
+.order-card .order-head { display: flex; justify-content: space-between; align-items: center; gap: .6rem; }
+.order-card .order-no { font-weight: 800; }
+.order-card .status-msg { margin: .5rem 0; font-weight: 600; }
+.order-card ul { list-style: none; margin: .4rem 0; padding: 0; }
+.order-card li { display: flex; justify-content: space-between; gap: .8rem; padding: .25rem 0; }
+.order-card .item-note { display: block; font-size: .88rem; color: var(--color-text-muted); font-style: italic; }
+.order-card.is-new { border-color: var(--status-new); }
+.order-card.is-cancelled { opacity: .8; }
+.table-total { display: flex; justify-content: space-between; font-weight: 800; padding: .8rem 0; }
+.empty-state { text-align: center; padding: 2rem 0; }
+
+/* Floating Call Waiter button */
+.waiter-fab { position: fixed; right: 16px; bottom: calc(5.4rem + env(safe-area-inset-bottom)); z-index: 44; min-height: 50px; padding: 0 1.1rem; border: 0; border-radius: 999px; background: var(--color-dark); color: var(--color-dark-contrast); font-weight: 700; box-shadow: var(--shadow-lg); cursor: pointer; display: inline-flex; align-items: center; gap: .4rem; }
+.waiter-fab:focus-visible { outline: 3px solid var(--color-brand); outline-offset: 2px; }
+.waiter-fab.is-requested { background: var(--status-new); color: var(--color-brand-contrast); }
+.waiter-fab.is-acknowledged { background: var(--status-accepted); color: var(--color-brand-contrast); }
+.waiter-fab.is-completed { background: var(--color-success); color: var(--color-brand-contrast); }
